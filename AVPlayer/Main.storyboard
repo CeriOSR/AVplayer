@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8F3-WK-xCw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Movie_and_Music_Player" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ua5-A4-onm">
+                        <barButtonItem key="rightBarButtonItem" title="Web Veiw" id="5yL-Qt-Ket">
+                            <connections>
+                                <segue destination="uNp-zV-3O6" kind="show" id="0oB-qb-Kat"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="122.78860569715144"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="BR8-0f-o5T">
+            <objects>
+                <viewController id="ZtH-Sf-Ihg" customClass="WebViewController" customModule="Movie_and_Music_Player" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f7q-H2-wWx"/>
+                        <viewControllerLayoutGuide type="bottom" id="YF6-4e-TZA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1GJ-XF-Wyh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbS-JG-ciW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="RbS-JG-ciW" secondAttribute="bottom" id="4cp-5r-FYi"/>
+                            <constraint firstItem="RbS-JG-ciW" firstAttribute="top" secondItem="f7q-H2-wWx" secondAttribute="bottom" id="7Qj-KF-H87"/>
+                            <constraint firstAttribute="trailing" secondItem="RbS-JG-ciW" secondAttribute="trailing" id="DAU-bF-kx3"/>
+                            <constraint firstItem="RbS-JG-ciW" firstAttribute="leading" secondItem="1GJ-XF-Wyh" secondAttribute="leading" id="mFx-cd-64p"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ScB-NU-HDz">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="O0a-Zm-BE5">
+                            <connections>
+                                <segue destination="8F3-WK-xCw" kind="show" id="lp0-nN-N88"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Music Player" id="UYp-3B-ZwL">
+                            <connections>
+                                <segue destination="via-y6-XYu" kind="show" id="SEC-tH-sTO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="RbS-JG-ciW" id="hcO-QV-GBn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uVa-Uy-PvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2512.8000000000002" y="122.78860569715144"/>
+        </scene>
+        <!--Music Controller-->
+        <scene sceneID="1AZ-tn-kmD">
+            <objects>
+                <viewController id="ddf-hw-a0R" customClass="MusicController" customModule="Movie_and_Music_Player" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S7h-Tl-SEg"/>
+                        <viewControllerLayoutGuide type="bottom" id="GxN-3Z-fht"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qAJ-az-AfA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAB-CE-srK">
+                                <rect key="frame" x="44" y="318" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="restartButton:" destination="ddf-hw-a0R" eventType="touchUpInside" id="5CV-2F-9aw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOn-an-eQp">
+                                <rect key="frame" x="291" y="318" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopButton:" destination="ddf-hw-a0R" eventType="touchUpInside" id="t0u-ro-Ifz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0V-lo-Sh8">
+                                <rect key="frame" x="166" y="381" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pauseButton:" destination="ddf-hw-a0R" eventType="touchUpInside" id="PHb-Nu-koL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LT-8D-jy4">
+                                <rect key="frame" x="172" y="318" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playButton:" destination="ddf-hw-a0R" eventType="touchUpInside" id="T5C-6S-z3U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7dE-Yp-E0N">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="5Wi-Dw-IZb">
+                            <connections>
+                                <segue destination="uNp-zV-3O6" kind="show" id="ZJX-wJ-oP8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EYb-Kg-Itf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3978" y="123"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wWN-q7-b1p">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8F3-WK-xCw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U1x-d3-apE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hd5-7w-9GH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9yX-Lr-xYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="374" y="123"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FQC-jY-4sB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uNp-zV-3O6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="THN-5U-If8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZtH-Sf-Ihg" kind="relationship" relationship="rootViewController" id="fib-O2-Y2z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7o-B7-37P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1784.8" y="122.78860569715144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nYD-xX-cQA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="via-y6-XYu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VH2-3D-sa0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ddf-hw-a0R" kind="relationship" relationship="rootViewController" id="hlf-wO-OFZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q3I-oU-5dH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3224.8000000000002" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZJX-wJ-oP8"/>
+    </inferredMetricsTieBreakers>
+</document>

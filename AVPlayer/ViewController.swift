@@ -1,25 +1,37 @@
 //
 //  ViewController.swift
-//  AVPlayer
+//  Movie and Music Player
 //
 //  Created by Rey Cerio on 2017-03-06.
 //  Copyright © 2017 CeriOS. All rights reserved.
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
+    var movieController = AVPlayerViewController()
+    var moviePlayer = AVPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let fileURL = NSURL(fileURLWithPath: "/Users/reycerio/Desktop/Movie and Music Player/Movie and Music Player/Taka V Taka.mov")
+        
+        moviePlayer = AVPlayer(url: fileURL as URL)
+        movieController.player = moviePlayer
+        present(movieController, animated: true) {
+            self.moviePlayer.play()
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        //called everytime view appears
     }
-
 
 }
 
